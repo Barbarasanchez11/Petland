@@ -38,7 +38,14 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=[
+        "http://localhost:3000",  # React dev server
+        "http://localhost:5173",  # Vite dev server
+        "http://localhost:4173",  # Vite preview
+        "https://petland-frontend.vercel.app",  # Frontend en Vercel
+        "https://petland-frontend.netlify.app",  # Frontend en Netlify
+        "https://tu-usuario.github.io",  # GitHub Pages
+    ],
     allow_credentials=True,
     allow_methods=["*"], 
     allow_headers=["*"],

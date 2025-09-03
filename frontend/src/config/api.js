@@ -1,4 +1,7 @@
-const API_BASE_URL =  "https://petland-backend-qnss.onrender.com";
+// Configuración de la API
+// En desarrollo: usar localhost
+// En producción: usar la URL del backend desplegado
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export const API_ENDPOINTS = {
   AUTH: {

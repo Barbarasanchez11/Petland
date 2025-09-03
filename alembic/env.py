@@ -10,6 +10,7 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
+# Configuración para Supabase
 ALEMBIC_DATABASE_URL = os.getenv("ALEMBIC_DATABASE_URL")
 if not ALEMBIC_DATABASE_URL:
     raise RuntimeError("ALEMBIC_DATABASE_URL not found inside .env file")
